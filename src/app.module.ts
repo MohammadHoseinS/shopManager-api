@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { DatabaseModule } from '@database/database.module';
 import { StorageModule } from '@shared/storage';
 import { ProductCategoryModule } from '@modules/category/category.module';
+import { ProductModule } from '@modules/product/product.module';
 import { LocalizationModule } from '@shared/localization';
 
 @Module({
@@ -11,7 +12,8 @@ import { LocalizationModule } from '@shared/localization';
     DatabaseModule,
     StorageModule,
     LocalizationModule,
-    ProductCategoryModule
+    ProductCategoryModule,
+    ProductModule
   ],
   controllers: [AppController],
   providers: [AppService],
