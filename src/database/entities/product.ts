@@ -29,12 +29,6 @@ export class ProductEntity extends BaseEntity {
 	price: number;
 
 	@Column({
-		nullable: true,
-		default: null
-	})
-	image: string;
-
-	@Column({
 		type: 'tinyint',
 		nullable: false,
 		default: 0
