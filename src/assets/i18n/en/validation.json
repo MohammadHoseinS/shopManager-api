@@ -1,0 +1,7 @@
+{
+	"isString": "The {property} must be a string.",
+	"isNotEmpty": "The {property} should not be empty.",
+	"isNumber": "The {property} must be a number.",
+	"min": "The {property} must be at least {constraint1}.",
+	"max": "The {property} must be at most {constraint1}."
+}

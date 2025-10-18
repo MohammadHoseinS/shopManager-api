@@ -1,0 +1,16 @@
+{
+	"loaded": "categories loaded successfuly",
+	"retrieved": "category information retrieved successfuly",
+	"created": "category created successfuly",
+	"updated": "category updated successfuly",
+	"deleted": "category deleted successfuly",
+	"fileUploaded": "category file uploaded successfuly",
+	"fileDeleted": "category file deleted successfuly",
+	"exceptions": {
+		"notFound": "the requested category was not found",
+		"create": "category was not created successfuly, please contact the support team",
+		"update": "category was not updated successfuly, please contact the support team",
+		"delete": "category was not deleted successfuly, please contact the support team",
+		"hasProducts": "the category cannot be deleted because it has products assigned to it"
+	}
+}

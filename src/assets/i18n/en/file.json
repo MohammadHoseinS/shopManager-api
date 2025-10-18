@@ -1,0 +1,10 @@
+{
+	"uploaded": "file uploaded successfully",
+	"exceptions": {
+		"uploadFailed": "file upload has failed",
+		"uploadFileExist": "a file with the same name already exists",
+		"deleteFileNotExist": "file does not exist",
+		"deleteFile": "file deletion failed",
+		"fileType": "the file type is not valid"
+	}
+}
