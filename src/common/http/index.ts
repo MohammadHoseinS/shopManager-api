@@ -1,2 +1,3 @@
 import { HttpExceptionFilter } from './http-exception.filter';
-export { HttpExceptionFilter };
+import { HttpResponseInterceptor } from './response.interceptor';
+export { HttpResponseInterceptor, HttpExceptionFilter };
