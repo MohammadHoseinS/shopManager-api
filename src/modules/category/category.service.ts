@@ -21,7 +21,7 @@ export class ProductCategoryService {
 			.skip(skip);
 
 		if (title) {
-			query.andWhere('category.name LIKE :name', { name: `%${title}%` });
+			query.andWhere('category.name ILIKE :name', { name: `%${title}%` });
 		}
 
 		return await query.getManyAndCount();

@@ -22,7 +22,7 @@ export class ProductService {
 		}
 
 		if (name) {
-			query.andWhere('product.name LIKE :name', { name: `%${name}%` });
+			query.andWhere('product.name ILIKE :name', { name: `%${name}%` });
 		}
 
 		return await query.getManyAndCount();
