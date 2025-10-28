@@ -9,7 +9,7 @@ export class OrderEntity extends BaseEntity {
 	@Column({
 		nullable: false
 	})
-	custmerId: number;
+	customerId: number;
 
 	@Column({
 		type: 'numeric',
@@ -49,7 +49,7 @@ export class OrderEntity extends BaseEntity {
 	/************************* Relations *************************/
 
 	@ManyToOne(() => CustomerEntity, customer => customer.orders)
-	custmer: Promise<CustomerEntity>;
+	customer: Promise<CustomerEntity>;
 
 	@OneToMany(() => OrderItemEntity, item => item.order)
 	items: Promise<OrderItemEntity[]>;

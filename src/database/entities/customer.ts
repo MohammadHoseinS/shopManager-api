@@ -23,7 +23,7 @@ export class CustomerEntity extends BaseEntity {
 
 	/************************* Relations *************************/
 
-	@OneToMany(() => OrderEntity, order => order.custmer)
+	@OneToMany(() => OrderEntity, order => order.customer)
 	orders: Promise<OrderEntity[]>;
 
 	/************************* Methods *************************/
