@@ -47,4 +47,9 @@ export class OrderItemEntity extends BaseEntity {
 		super();
 		Object.assign(this, props);
 	}
+
+	async getProductName(): Promise<string> {
+		const product = await this.product;
+		return product?.name;
+	}
 }
