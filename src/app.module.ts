@@ -7,6 +7,7 @@ import { ProductCategoryModule } from '@modules/category/category.module';
 import { ProductModule } from '@modules/product/product.module';
 import { LocalizationModule } from '@shared/localization';
 import { CustomerModule } from '@modules/customer/customer.module';
+import { OrderModule } from '@modules/order/order.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { CustomerModule } from '@modules/customer/customer.module';
     LocalizationModule,
     ProductCategoryModule,
     ProductModule,
-    CustomerModule
+    CustomerModule,
+    OrderModule
   ],
   controllers: [AppController],
   providers: [AppService],
