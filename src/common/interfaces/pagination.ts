@@ -1,5 +1,7 @@
 /**
  * Interface intended for requesting results paginated
+ * 
+ * - send page and limit to handle pagination
  */
 export interface IPaginationRequest<T = any> {
 	/**
