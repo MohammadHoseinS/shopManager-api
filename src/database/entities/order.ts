@@ -6,16 +6,13 @@ import { OrderStatus } from "@common/enums";
 
 @Entity('orders')
 export class OrderEntity extends BaseEntity {
-	@Column({
-		nullable: false
-	})
+	@Column()
 	customerId: number;
 
 	@Column({
 		type: 'numeric',
 		precision: 12,
 		scale: 2,
-		nullable: false,
 		default: 0
 	})
 	totalPrice: number;
@@ -29,7 +26,6 @@ export class OrderEntity extends BaseEntity {
 	@Column({
 		type: 'enum',
 		enum: OrderStatus,
-		nullable: false,
 		default: OrderStatus.Draft
 	})
 	status: OrderStatus;

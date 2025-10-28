@@ -4,9 +4,7 @@ import { OrderEntity } from "./order";
 
 @Entity('customers')
 export class CustomerEntity extends BaseEntity {
-	@Column({
-		nullable: false
-	})
+	@Column()
 	name: string;
 
 	@Column({

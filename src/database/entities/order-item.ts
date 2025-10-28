@@ -5,20 +5,15 @@ import { BaseEntity } from "@database/base.entity";
 
 @Entity('orderItems')
 export class OrderItemEntity extends BaseEntity {
-	@Column({
-		nullable: false
-	})
+	@Column()
 	orderId: number;
 
-	@Column({
-		nullable: false
-	})
+	@Column()
 	productId: number;
 	
 	@Column({
 		type: 'int2',
-		nullable: false,
-		default: 1
+		default: 0
 	})
 	quantity: number;
 
@@ -26,7 +21,6 @@ export class OrderItemEntity extends BaseEntity {
 		type: 'numeric',
 		precision: 12,
 		scale: 2,
-		nullable: false,
 		default: 0
 	})
 	unitPrice: number;
@@ -35,7 +29,6 @@ export class OrderItemEntity extends BaseEntity {
 		type: 'numeric',
 		precision: 12,
 		scale: 2,
-		nullable: false,
 		default: 0
 	})
 	subtotal: number;
