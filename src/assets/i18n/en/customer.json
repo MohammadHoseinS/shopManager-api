@@ -1,0 +1,14 @@
+{
+	"loaded": "customers list was successfully loaded",
+	"retrieved": "customer information retrieved successfully",
+	"created": "customer information was successfully registered",
+	"updated": "customer information was successfully updated",
+	"deleted": "customer was deleted",
+	"exceptions": {
+		"hasOrders": "customer information cannot be deleted because they have related orders in the system",
+		"notFound": "the requested customer was not found",
+		"create": "customer was not created successfuly, please contact the support team",
+		"update": "customer was not updated successfuly, please contact the support team",
+		"delete": "customer was not deleted successfuly, please contact the support team"
+	}
+}
