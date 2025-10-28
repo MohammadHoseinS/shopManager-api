@@ -15,6 +15,7 @@ export class CustomerService {
 
 		const query = this.dataSource
 			.createQueryBuilder(CustomerEntity, 'c')
+			.orderBy('c.name', 'DESC')
 			.take(take)
 			.skip(skip);
 
