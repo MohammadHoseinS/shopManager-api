@@ -1,0 +1,19 @@
+{
+	"loaded": "orders loaded successfuly",
+	"retrieved": "order information retrieved successfuly",
+	"created": "order created successfuly",
+	"updated": "order information updated successfuly",
+	"finalized": "order status was updated to finalized successfuly",
+	"shipped": "order status was updated to shipped successfuly",
+	"canceled": "order status was updated to canceled successfuly",
+	"deleted": "order deleted successfuly",
+	"exceptions": {
+		"notFound": "the requested order was not found",
+		"create": "order was not created successfuly, please contact the support team",
+		"update": "order was not updated successfuly, please contact the support team",
+		"delete": "order was not deleted successfuly, please contact the support team",
+		"finalized": "the order cannot be modified or deleted because it is finalized",
+		"not-finalized": "the order must be finalized to perform this action",
+		"no-items": "the order must have at least one item to be finalized"
+	}
+}

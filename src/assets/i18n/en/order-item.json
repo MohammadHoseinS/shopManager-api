@@ -1,0 +1,16 @@
+{
+	"created": "order item created successfuly",
+	"quantity-increased": "order item's quantity increased successfuly",
+	"quantity-decreased": "order item's quantity decreased successfuly",
+	"deleted": "order item deleted successfuly",
+	"exceptions": {
+		"notFound": "the requested order item was not found",
+		"create": "order item was not created successfuly, please contact the support team",
+		"quantity-increase": "order item's quantity was not increased successfuly, please contact the support team",
+		"quantity-decrease": "order item's quantity was not decreased successfuly, please contact the support team",
+		"delete": "order item was not deleted successfuly, please contact the support team",
+		"finalized": "the order items cannot be added, modified or deleted because the order is finalized",
+		"exists": "the product already exists in the order, if the quantity needs to be changed, please update the existing item",
+		"min-quantity": "the order item's quantity cannot be less than 1, if the item needs to be removed, please delete the item instead"
+	}
+}

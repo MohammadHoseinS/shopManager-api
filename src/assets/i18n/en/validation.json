@@ -3,6 +3,7 @@
 	"isNotEmpty": "The {property} should not be empty.",
 	"isNumber": "The {property} must be a number.",
 	"isEmail": "The {property} must be a valid email address.",
+	"isDate": "The {property} must be a valid date.",
 	"min": "The {property} must be at least {constraint1}.",
 	"max": "The {property} must be at most {constraint1}."
 }
