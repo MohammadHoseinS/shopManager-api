@@ -15,6 +15,12 @@ export class CustomerEntity extends BaseEntity {
 	})
 	email: string;
 
+	@Column({
+		nullable: true,
+		default: null
+	})
+	note: string;
+
 	/************************* Relations *************************/
 
 	@OneToMany(() => OrderEntity, order => order.custmer)
