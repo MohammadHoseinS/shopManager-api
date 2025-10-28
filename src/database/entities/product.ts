@@ -1,6 +1,7 @@
 import { BaseEntity } from "@database/base.entity";
-import { Column, Entity, ManyToOne } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany } from "typeorm";
 import { ProductCategoryEntity } from "./product-category";
+import { OrderItemEntity } from "./order-item";
 
 @Entity('products')
 export class ProductEntity extends BaseEntity {
@@ -39,6 +40,9 @@ export class ProductEntity extends BaseEntity {
 
 	@ManyToOne(() => ProductCategoryEntity, category => category.products)
 	category: Promise<ProductCategoryEntity>;
+
+	@OneToMany(() => OrderItemEntity, item => item.product)
+	orderItems: Promise<OrderItemEntity[]>;
 
 	/************************* Functions *************************/
 
