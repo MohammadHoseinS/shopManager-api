@@ -40,8 +40,9 @@ export class CustomerService {
 
 	async update(customer: CustomerEntity, dto: CustomerSubmitDto): Promise<CustomerEntity> {
 		customer.name = dto.name;
-		customer.email = dto.email;
-		customer.note = dto.note;
+		// set default value of nullable fields to null, since if it's undefined, typeorm it doesn't get updated in postgersql
+		customer.email = dto.email ?? null;
+		customer.note = dto.note ?? null;
 		return await this.dataSource.manager.save(customer);
 	}
 

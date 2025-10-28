@@ -37,7 +37,8 @@ export class ProductCategoryService {
 
 	async update(category: ProductCategoryEntity, dto: ProductCategorySubmitDto): Promise<ProductCategoryEntity> {
 		category.name = dto.name;
-		category.description = dto.description;
+		// set default value to null, since if it's undefined, typeorm it doesn't get updated in postgersql
+		category.description = dto.description ?? '';
 		return await this.dataSource.manager.save(category);
 	}
 

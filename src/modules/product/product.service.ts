@@ -42,7 +42,8 @@ export class ProductService {
 
 	async update(product: ProductEntity, dto: ProductSubmitDto): Promise<ProductEntity> {
 		product.name = dto.name;
-		product.description = dto.description;
+		// set default value to null, since if it's undefined, typeorm it doesn't get updated in postgersql
+		product.description = dto.description ?? '';
 		product.price = dto.price;
 		product.stock = dto.stock;
 		return await this.dataSource.manager.save(product);
