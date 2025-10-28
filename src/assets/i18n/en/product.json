@@ -9,6 +9,7 @@
 		"create": "product was not created successfuly, please contact the support team",
 		"update": "product was not updated successfuly, please contact the support team",
 		"delete": "product was not deleted successfuly, please contact the support team",
-		"minStock": "the product stock cannot be less than zero"
+		"minStock": "the product stock cannot be less than zero",
+		"hasOrderItems": "the product cannot be deleted, because it has related order items"
 	}
 }
