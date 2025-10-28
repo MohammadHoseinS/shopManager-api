@@ -71,6 +71,11 @@ export class ProductController {
 	async delete(
 		@Param('id', ProductPipe) product: ProductEntity
 	): Promise<boolean> {
+		const hasOrderItems = await this.product$.hasOrderItems(product);
+		if (hasOrderItems) {
+			throw new BadRequestException('product.exceptions.hasOrderItems');
+		}
+
 		const result = await this.product$.delete(product);
 		if (!result) {
 			throw new BadRequestException('product.exceptions.delete');

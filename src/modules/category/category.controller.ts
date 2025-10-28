@@ -88,8 +88,8 @@ export class ProductCategoryController {
 	async delete(
 		@Param('id', ProductCategoryPipe) category: ProductCategoryEntity
 	): Promise<boolean> {
-		const totalItems = await category.getTotalItems();
-		if (totalItems > 0) {
+		const hasProducts = await this.category$.hasProducts(category);
+		if (hasProducts) {
 			throw new BadRequestException('category.exceptions.hasProducts');
 		}
 

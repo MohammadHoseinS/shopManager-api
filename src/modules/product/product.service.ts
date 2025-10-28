@@ -4,6 +4,7 @@ import { DataSource } from "typeorm";
 import { ProductFilterDto, ProductSubmitDto } from "./product.dto";
 import { ProductEntity } from "@database/entities/product";
 import { ProductCategoryEntity } from "@database/entities/product-category";
+import { OrderItemEntity } from "@database/entities/order-item";
 
 @Injectable()
 export class ProductService {
@@ -45,6 +46,12 @@ export class ProductService {
 		product.price = dto.price;
 		product.stock = dto.stock;
 		return await this.dataSource.manager.save(product);
+	}
+
+	async hasOrderItems(product: ProductEntity): Promise<boolean> {
+		return await this.dataSource.manager.existsBy(OrderItemEntity, {
+			productId: product.id
+		});
 	}
 
 	async delete(product: ProductEntity): Promise<boolean> {

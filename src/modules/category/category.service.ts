@@ -3,6 +3,7 @@ import { Injectable } from "@nestjs/common";
 import { DataSource } from "typeorm";
 import { ProductCategoryFilterDto, ProductCategorySubmitDto } from "./category.dto";
 import { ProductCategoryEntity } from "@database/entities/product-category";
+import { ProductEntity } from "@database/entities/product";
 
 @Injectable()
 export class ProductCategoryService {
@@ -48,6 +49,12 @@ export class ProductCategoryService {
 	async removeIcon(category: ProductCategoryEntity): Promise<ProductCategoryEntity> {
 		category.icon = null;
 		return await this.dataSource.manager.save(category);
+	}
+
+	async hasProducts(category: ProductCategoryEntity): Promise<boolean> {
+		return await this.dataSource.manager.existsBy(ProductEntity, {
+			categoryId: category.id
+		});
 	}
 
 	async delete(category: ProductCategoryEntity): Promise<boolean> {
