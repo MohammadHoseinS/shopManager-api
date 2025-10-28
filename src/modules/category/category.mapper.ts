@@ -12,8 +12,8 @@ export class ProductCategoryMapper {
 			id: entity.id,
 			createdOn: entity.createdOn,
 			name: entity.name,
-			description: entity.description,
-			icon: entity.icon,
+			description: entity.description || '',
+			icon: entity.icon || '',
 			totalItems
 		});
 	}

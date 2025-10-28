@@ -12,7 +12,7 @@ export class ProductMapper {
 			id: entity.id,
 			createdOn: entity.createdOn,
 			name: entity.name,
-			description: entity.description,
+			description: entity.description || '',
 			price: entity.price,
 		})
 	}
@@ -25,7 +25,7 @@ export class ProductMapper {
 			createdOn: entity.createdOn,
 			category: categoryModel,
 			name: entity.name,
-			description: entity.description,
+			description: entity.description || '',
 			price: entity.price,
 			stock: entity.stock
 		});
