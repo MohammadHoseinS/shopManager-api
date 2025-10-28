@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 config({ path: resolve(__dirname, '../../.env') });
 export const dataSourceOptions: DataSourceOptions = {
-	type: 'mysql',
+	type: 'postgres',
 	host: process.env.DATABASE_HOSTNAME,
 	port: parseInt(process.env.DATABASE_PORT),
 	username: process.env.DATABASE_USERNAME,

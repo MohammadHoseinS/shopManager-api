@@ -20,7 +20,7 @@ export class ProductEntity extends BaseEntity {
 	description: string;
 
 	@Column({
-		type: 'decimal',
+		type: 'numeric',
 		precision: 12,
 		scale: 2,
 		nullable: false,
@@ -29,7 +29,7 @@ export class ProductEntity extends BaseEntity {
 	price: number;
 
 	@Column({
-		type: 'tinyint',
+		type: 'int2',
 		nullable: false,
 		default: 0
 	})
