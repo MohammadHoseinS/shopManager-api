@@ -47,6 +47,12 @@ export class OrderEntity extends BaseEntity {
 		nullable: true,
 		default: null
 	})
+	shippedOn: Date;
+
+	@Column({
+		nullable: true,
+		default: null
+	})
 	canceledOn: Date;
 
 	/************************* Relations *************************/
